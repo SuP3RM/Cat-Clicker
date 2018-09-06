@@ -11,3 +11,14 @@ elem1.addEventListener('click', function(){
   count += 1;
   click.innerHTML = count;
 }, false);
+
+
+
+catsArray = []
+catChosen = []
+
+for (var cat in object) {
+  if (object.hasOwnProperty(cat)) {
+
+  }
+}
