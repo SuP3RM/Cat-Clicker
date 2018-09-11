@@ -28,10 +28,25 @@ body {
   background: lightgreen;
 }
 
-.name {
+.cat-name {
   background-color: gold;
 }
 
 @media all and (min-width: 600px) {
   .aside { flex: 1 auto; }
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.choose_here {
+  font-style: italic;
+  background-color: yellow;
+  margin-right: 41%;
+  margin-left: 41%;
+}
+
+.choose_here {
+
 }
