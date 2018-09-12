@@ -1,52 +1,11 @@
-body {
-  padding: 2em;
-}
-
-.wrapper {
+html, body {
   display: flex;
-  flex-flow: row wrap;
-  font-weight: bold;
-  text-align: center;
+  font-size: 16px;
+  font-family: serif;
+
 }
 
-.wrapper>* {
-  padding: 10px;
-  flex: 1 100%;
-}
-
-.header {
-  background: tomato;
-  font-size: 200%;
-}
-
-.main {
-  text-align: left;
-  background: deepskyblue;
-}
-
-.footer {
-  background: lightgreen;
-}
-
-.cat-name {
-  background-color: gold;
-}
-
-@media all and (min-width: 600px) {
-  .aside { flex: 1 auto; }
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.choose_here {
-  font-style: italic;
-  background-color: yellow;
-  margin-right: 41%;
-  margin-left: 41%;
-}
-
-.choose_here {
-
+img, .cat_name {
+  max-width: 50%;
+  /*visibility: hidden;*/
 }
