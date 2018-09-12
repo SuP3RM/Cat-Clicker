@@ -25,4 +25,42 @@ let model = {
 
 // View, what the user sees and interacts with.
 
+let catView = {
+  // grabbing DOM elements storing in variables
+  init: function() {
+    this.catElem = document.getElementById('cat');
+    this.catName = document.getElementById('cat-name');
+    this.catCounter = document.getElementById('cat-count');
+    this.catImage = document.getElementById('cat-img');
+
+    this.catImage.addEventListener('click', function(){
+      octopus.incrementCounter();
+
+    this.render();
+    });
+
+
+    // render the cat View
+    render: function () {
+      // update the DOM elements with values from the current cat
+      let Cat = octopus.getCurrentCat();
+      this.catCounter.textContent = Cat.Count;
+      this.catName.textContent = Cat.name;
+      this.catImage.src = Cat.src;
+    }
+  }
+}
+
+let catListView = {
+   init: function () {
+     this.catListName = document.getElementById('cat-list');
+
+     this.render();
+   }
+
+   render: function () {
+
+   }
+}
+
 // Octopus, ties both M&V together so they wont talk to each other.
