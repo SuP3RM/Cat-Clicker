@@ -2,8 +2,6 @@
 
 // Model, holds data.
 
-
-
 let model = {
   class cat {
     constructor(name, src) {
@@ -11,7 +9,7 @@ let model = {
       this.img = "images/" + src;
       this.count = 0;
     }
-  };
+  },
 
   let catChoosen = [];
   catChoosen.push(Chewie = new Cat('Chewie', chewiecat.jpg));
@@ -20,8 +18,25 @@ let model = {
   catChoosen.push(McSqwwney = new Cat('McSqwwney', McSqwwney.jpg));
   catChoosen.push(Yana = new Cat('Yana', yana.jpg));
 
-  let currentCat = [0];
-}
+  const currentCat = null;
+};
+
+// Octopus, ties both M&V together so they wont talk to each other.
+
+const octopus = {
+  init: function () {
+    model.currentCat = model.catChoosen[0] // det defualt cat to view
+    catListView.init();
+    catView.init();
+
+  },
+
+  getCurrentCat: function () {
+    return model.currentCat;
+  },
+
+
+};
 
 // View, what the user sees and interacts with.
 
@@ -40,6 +55,9 @@ let catView = {
     });
 
 
+
+
+
     // render the cat View
     render: function () {
       // update the DOM elements with values from the current cat
@@ -56,11 +74,9 @@ let catListView = {
      this.catListName = document.getElementById('cat-list');
 
      this.render();
-   }
+   },
 
    render: function () {
 
-   }
+   },
 }
-
-// Octopus, ties both M&V together so they wont talk to each other.
